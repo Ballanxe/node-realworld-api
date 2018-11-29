@@ -1,5 +1,4 @@
-var fs = require('fs'),
-    http = require('http'),
+var http = require('http'),
     path = require('path'),
     methods = require('methods'),
     express = require('express'),
@@ -38,8 +37,9 @@ if(isProduction){
   mongoose.set('debug', true);
 }
 
-
 require('./models/User');
+require('./models/Article');
+// require('./models/Comment');
 require('./config/passport');
 
 app.use(require('./routes'));
