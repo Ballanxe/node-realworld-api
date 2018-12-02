@@ -4,10 +4,6 @@ var passport = require('passport');
 var User = mongoose.model('User');
 var auth = require('../auth');
 
-router.post('/about', function (req, res) {
-  res.send('About this wiki');
-})
-
 router.post('/users', function(req, res, next){
   var user = new User();
 
